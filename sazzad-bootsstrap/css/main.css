@@ -1,0 +1,258 @@
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+/* ------------------------------------------------------------------------------
+	 Typography
+-------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	color: #6c7279;
+}
+
+.section {
+	padding: 100px 0;
+}
+.no-padding {
+	padding: 0;
+}
+.no-gutter [class*=col-] {
+	padding-right: 0;
+	padding-left: 0;
+}
+/* ==========================================================================
+	$Header
+========================================================================== */
+#header {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+#header .header-content {
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 40px 0;
+	width: 100%;
+	-moz-transition: padding 0.3s;
+	-o-transition: padding 0.3s;
+	-webkit-transition: padding 0.3s;
+	transition: padding 0.3s;
+}
+#header .logo {
+	font-size: 27px;
+	color: #000;
+	letter-spacing: 3px;
+	font-weight: 300;
+	float: left;
+	text-transform: uppercase;
+}
+#header.fixed {
+	background-color: rgba(255, 255, 255, 0.75);
+}
+#header.fixed .header-content {
+	border-bottom: 0;
+	padding: 25px 0;
+}
+#header.fixed .nav-toggle {
+	top: 18px;
+}
+.navigation.open {
+	opacity: 0.9;
+	visibility: visible;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+.navigation {
+	float: right;
+}
+.navigation li {
+	display: inline-block;
+}
+.navigation a {
+	color: #808080;
+	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	margin-left: 40px;
+}
+.navigation a:hover, .navigation a.active {
+	color: #262626;
+}
+.nav-toggle {
+	display: none;
+	height: 44px;
+	overflow: hidden;
+	position: fixed;
+	right: 5%;
+	text-indent: 100%;
+	top: 32px;
+	white-space: nowrap;
+	width: 44px;
+	z-index: 99999;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.nav-toggle:before, .nav-toggle:after {
+	border-radius: 50%;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: transform;
+}
+.nav-toggle:before {
+	background-color: #e84545;
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.nav-toggle:after {
+	background-color: #e84545;
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-moz-transition-duration: 0s;
+	-o-transition-duration: 0s;
+	-webkit-transition-duration: 0s;
+	transition-duration: 0s;
+}
+.nav-toggle span {
+	background-color: #fff;
+	bottom: auto;
+	display: inline-block;
+	height: 3px;
+	left: 50%;
+	position: absolute;
+	right: auto;
+	top: 50%;
+	width: 18px;
+	z-index: 10;
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+.nav-toggle span:before, .nav-toggle span:after {
+	background-color: #fff;
+	content: "";
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transition: -moz-transform 0.3s;
+	-o-transition: -o-transform 0.3s;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.nav-toggle span:before {
+	-moz-transform: translateY(-6px) rotate(0deg);
+	-ms-transform: translateY(-6px) rotate(0deg);
+	-webkit-transform: translateY(-6px) rotate(0deg);
+	transform: translateY(-6px) rotate(0deg);
+}
+.nav-toggle span:after {
+	-moz-transform: translateY(6px) rotate(0deg);
+	-ms-transform: translateY(6px) rotate(0deg);
+	-webkit-transform: translateY(6px) rotate(0deg);
+	transform: translateY(6px) rotate(0deg);
+}
+.nav-toggle.close-nav:before {
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+.nav-toggle.close-nav:after {
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.nav-toggle.close-nav span {
+	background-color: rgba(255, 255, 255, 0);
+}
+.nav-toggle.close-nav span:before, .nav-toggle.close-nav span:after {
+	background-color: #fff;
+}
+.nav-toggle.close-nav span:before {
+	-moz-transform: translateY(0) rotate(45deg);
+	-ms-transform: translateY(0) rotate(45deg);
+	-webkit-transform: translateY(0) rotate(45deg);
+	transform: translateY(0) rotate(45deg);
+}
+.nav-toggle.close-nav span:after {
+	-moz-transform: translateY(0) rotate(-45deg);
+	-ms-transform: translateY(0) rotate(-45deg);
+	-webkit-transform: translateY(0) rotate(-45deg);
+	transform: translateY(0) rotate(-45deg);
+}
+/* ==========================================================================
+	$Banner
+========================================================================== */
+.banner {
+	background-color: pink;
+	background-position: center top;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height: 750px;
+}
+.banner-inner-wrapper {
+	float: left;
+}
+.banner-text {
+	padding-top: 45%;
+}
+
+/* ==========================================================================
+	$Teams
+========================================================================== */
+
+.intro-content {
+	margin-top: 20px;
+}
+/* ------------------------------------------------------------------------------
+	 Footer
+-------------------------------------------------------------------------------*/
+.footer {
+	width: 94%;
+	margin: auto;
+	text-align: left;
+	padding-top: 5%;
+	padding-bottom: 7%;
+}
